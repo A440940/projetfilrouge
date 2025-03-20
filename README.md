@@ -4,11 +4,11 @@
 
 AI assistant for Amateur Gardeners 🤖🌱
 
-Livrable semaine 5 : version simple de votre solution d'IA -> recommendation de plantes avec un KNN
+Livrable semaine 5 : version simple de votre solution d'IA -> recommandation de plantes avec un KNN
 
-Pour obtenir une recommendation : 
+Pour obtenir une recommandation : 
 
-1) Changer (ou pas) les données utilisateurs dans data/05_model_input/fausses_donnees_utilisateur.csv
+1) Changer (ou pas) les données utilisateur dans data/05_model_input/fausses_donnees_utilisateur.csv
 2) Lancer le pipeline d'inférence avec la commande
 ```
 kedro run
