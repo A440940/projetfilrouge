@@ -1,0 +1,45 @@
+# Here you can define all your datasets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+raw_dataset:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/plant_details_all.csv
+
+type_imputation_file:
+  type : pandas.CSVDataset
+  filepath: data/01_raw/type_impute.csv
+
+hardiness_imputation_file:
+  type : pandas.CSVDataset
+  filepath: data/01_raw/hardiness_impute.csv
+
+clean_dataset:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/plants_clean_dataset.pq
+
+recommendation_preprocessor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/recommendation_preprocessor.pickle
+
+recommendation_dataset:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/recommendation_dataset.pq
+
+X :
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/X.csv
+
+nearest_neighbors:
+  type: pickle.PickleDataset
+  filepath: data/06_models/nn.pickle
+  versioned: true
+
+user_data:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/fausses_donnees_utilisateur.csv
+
+recommendations:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/recommendations.csv

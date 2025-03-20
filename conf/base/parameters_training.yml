@@ -1,0 +1,3 @@
+POISONOUS_COL : ['poisonous_to_humans', 'poisonous_to_pets']
+COLUMNS_TO_DROP : ['common_name', 'scientific_name', 'id']
+K_NEIGHBORS : 7

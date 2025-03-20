@@ -1,0 +1,57 @@
+RELEVANT_FEATURES : ['id',
+                     'common_name', 
+                     'scientific_name', 
+                     'type', 
+                     'cycle', 
+                     'attracts', 
+                     'watering',     
+                     'maintenance', 
+                     'care_level', 
+                     'sunlight', 
+                     'drought_tolerant',  
+                     'salt_tolerant', 
+                     'thorny', 
+                     'poisonous_to_humans', 
+                     'poisonous_to_pets', 
+                     'edible_fruit', 
+                     'medicinal',
+                     'hardiness.min', 
+                     'hardiness.max']
+
+HARDINESS_MAX_COL : 'hardiness_max'
+HARDINESS_MIN_COL : 'hardiness_min'
+MAINTENANCE_COL : 'maintenance'
+CARE_LEVEL_COL : 'care_level'
+WATERING_COL : 'watering'
+ATTRACTS_COL : 'attracts'
+SUNLIGHT_COL : 'sunlight'
+CYCLE_COL : "cycle"
+TYPE_COL : 'type'
+ID_COL : 'id'
+
+MAINTENANCE_IMPUTATION_FEATURES : ['care_level', 'watering']
+MAINTENANCE_LEVELS : ['low', 'moderate', 'high']
+CARE_LEVELS : ['medium', 'moderate', 'high', 'low', 'easy']
+HARDINESS_LEVELS : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]
+
+FEATURES_TO_LOWER : ['maintenance', 'care_level', 'watering', 'type']
+FEATURES_WITH_LISTS : ['attracts', 'sunlight']
+BOOLEAN_FEATURES : {'poisonous_to_pets': True, 'edible_fruit': False}
+FEATURES_TO_DROP : ['care_level', 'watering', 'cycle', 'attracts']
+FEATURES_TO_RENAME : {"hardiness.min": 'hardiness_min', "hardiness.max": 'hardiness_max'}
+NEW_FEATURES : {'attracts': {'attracts_birds': ['birds', 'hummingbirds'], 
+                             'attracts_butterflies': ['butterflies']},
+                'cycle': {'is_perennial': "Annual"}}
+
+FULL_SUN_LIST : ['full sun', 'sun', 'full sun partial sun']
+FULL_SHADE_LIST : ["deep shade", "full shade", "shade"]
+
+TYPE_TO_PLANT : {"arbres": ["tree", "broadleaf evergreen", "needled evergreen", "bamboo"],
+                 "herbes": ['herb', 'herbs', 'grass', 'poales (grass-like)', 'weed', 'ornamental grass', 'rush or sedge', 'turfgrass', 'reed', 'reeds', 'fern'],
+                 "arbustes": ['deciduous shrub', 'shrub', 'bush', 'palm or cycad'],
+                 "potager" : ['vegetable', 'fruit'],
+                 "plantes_grimpantes": ['vine', 'creeper', 'creepers'],
+                 "succulentes": ['cactus', 'euphorbia'],
+                 "fleurs": ['flower', 'bulb', 'orchid','begonia', 'dahlia', 'iridaceae', 'daisy', 'bergenia', 
+                            'coneflower', 'aster', 'thistle', 'thrift', 'carnation', 'astilbe', 'dianthus', 'delphinium', 'aquatic', 'carnivorous']
+}

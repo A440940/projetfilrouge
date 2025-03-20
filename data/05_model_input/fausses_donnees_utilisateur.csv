@@ -1,0 +1,2 @@
+type,maintenance,sunlight,drought_tolerant,salt_tolerant,thorny,edible_fruit,medicinal,hardiness_min,hardiness_max,is_perennial,attracts_birds,attracts_butterflies
+fleurs,moderate,part_shade,FALSE,FALSE,TRUE,FALSE,FALSE,8.0,8.0,TRUE,TRUE,TRUE
